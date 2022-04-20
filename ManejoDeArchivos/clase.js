@@ -8,7 +8,6 @@ class Contenedor {
     async getAll() {
        try {
             const objs = await fs.readFile(this.archivo, "utf-8")
-            //console.log(objs);
             return JSON.parse(objs)
          
         } catch (err) {
@@ -27,30 +26,23 @@ class Contenedor {
     }
 
     async save(obj) {
-        
-        const objs = await this.getAll()
-
-        //console.log(objs)
-
-        let newId = 1
-
-        if (objs.length > 0) {
-            newId = objs[objs.length - 1].id + 1
-        }
-
-        const newObj = {...obj, id: newId}
-        objs.push(newObj)
-        
-        fs.writeFile(this.archivo, JSON.stringify(objs, null, 2), (err) => {
-            if (err) {
-                console.log("error al crear el archivo", err); /*retornar error */
-            } else {
-                console.log("success");
-                return newId
+        try {
+            const objs = await this.getAll();
+            //console.log(objs)
+            let newId = 1;
+            if(objs.length > 0){
+                newId = objs[objs.length - 1].id + 1;
             }
-        })
-        
-    }
+            const newObj = {...obj, id: newId}
+            objs.push(newObj)
+
+            fs.writeFile(this.archivo, JSON.stringify(objs, null, 2))
+            console.log(`Creado exitosamente el producto ${newId}`);
+            
+        } catch (error) {
+            console.log('Error al crear', error);
+        }
+    };
 
     async getById(idProducto) {
         const jsonData = await this.getAll()
@@ -59,15 +51,15 @@ class Contenedor {
     }
 
     async deleteById(idProducto) {
-        const productos = await this.getAll()
-        const nuevoArr = await productos.filter(e => e.id != idProducto)
-        fs.writeFile(this.archivo, JSON.stringify(nuevoArr, null, 2), (err) => {
-            if (err) {
-                console.log("error al borrar el producto seleccionado", err);
-            } else {
-                console.log("success");
-            }
-        })
+        try {
+            const productos = await this.getAll()
+            const nuevoArr = await productos.filter(e => e.id != idProducto)
+            fs.writeFile(this.archivo, JSON.stringify(nuevoArr, null, 2))
+            console.log(`Se borro correctamente el producto con el id: ${idProducto}`);
+        } catch (error) {
+            return error
+        }
+        
     }
 
 
