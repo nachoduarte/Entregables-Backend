@@ -1,0 +1,32 @@
+[
+  {
+    "name": "gabinete",
+    "price": 2000,
+    "thumbnail": "https://res.cloudinary.com/dnwlad3kp/image/upload/v1639164275/compragamer_Imganen_general_20250_Gabinete_Kolink_Void_ARGB_ATX_Vidrio_Templado_f962dc11-grn_tbhtbb.png",
+    "id": 1
+  },
+  {
+    "name": "notebook",
+    "price": 12000,
+    "thumbnail": "https://res.cloudinary.com/dnwlad3kp/image/upload/v1637962406/compragamer_Imganen_general_28957_Notebook_Gamer_ASUS_TUF_FX15_15_bbqw6x.png",
+    "id": 2
+  },
+  {
+    "name": "Motherboard",
+    "price": 40000,
+    "thumbnail": "https://res.cloudinary.com/dnwlad3kp/image/upload/v1639164275/compragamer_Imganen_general_19215_Mother_ASUS_ROG_STRIX_B550-F_GAMING_WI-FI_AM4_PCI-E_4_ijay0s.png",
+    "id": 3
+  },
+  {
+    "id": 4,
+    "name": "computadora",
+    "price": 500,
+    "thumbnail": "foto"
+  },
+  {
+    "id": 5,
+    "name": "videojuego",
+    "price": 60,
+    "thumbnail": "foto"
+  }
+]
