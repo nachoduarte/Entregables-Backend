@@ -1,0 +1,58 @@
+[
+  {
+    "author": {
+      "email": "nacho.duarte.97@gmail.com",
+      "nombre": "nacho",
+      "apellido": "duarte",
+      "edad": "25",
+      "alias": "juanignacho",
+      "avatar": "https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/3_avatar-512.png"
+    },
+    "date": "26/6/2022",
+    "hour": "22:51:35",
+    "message": "prueba de mensajes",
+    "id": 1
+  },
+  {
+    "author": {
+      "email": "federicomatiasluna@gmail.com",
+      "nombre": "federico",
+      "apellido": "luna",
+      "edad": "25",
+      "alias": "fico.fico",
+      "avatar": "https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/3_avatar-1024.png"
+    },
+    "date": "26/6/2022",
+    "hour": "22:53:47",
+    "message": "prueba de mensajes 2",
+    "id": 2
+  },
+  {
+    "author": {
+      "email": "laripaez@gmail.com",
+      "nombre": "lara",
+      "apellido": "paez",
+      "edad": "25",
+      "alias": "laricon",
+      "avatar": "https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/3_avatar-1024.png"
+    },
+    "date": "28/6/2022",
+    "hour": "16:32:08",
+    "message": "prueba de mensajes 3",
+    "id": 3
+  },
+  {
+    "author": {
+      "email": "vitomorici@gmail.com",
+      "nombre": "vito",
+      "apellido": "morici",
+      "edad": "27",
+      "alias": "vit",
+      "avatar": "https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/3_avatar-512.png"
+    },
+    "date": "28/6/2022",
+    "hour": "17:05:20",
+    "message": "prueba de mensajes 4",
+    "id": 4
+  }
+]
