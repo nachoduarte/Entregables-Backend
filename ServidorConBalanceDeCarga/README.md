@@ -3,8 +3,8 @@
 
 Al iniciar los servidores tener en cuenta: 
 
--p <numero del puerto>
--m <modo cluster o modo fork>
+* ` -p ` indica el numero del puerto
+* ` -m ` indica si se trabajara en modo cluster o modo fork
 
 En caso de no indicar valores se iniciara en puerto 8080 en modo Fork.
 
