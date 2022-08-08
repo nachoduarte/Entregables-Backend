@@ -1,0 +1,19 @@
+<div class="h-100 w-100 mt-5 justify-content-center align-items-center border rounded border-secondary">
+    <h1 class="text-dark text-center my-4 ">RANDOM</h1>
+    <div class="h-100 w-100 mt-5">
+        <div class="table w-75 mx-auto">
+            <table class="table table-light table-striped">
+                <tr>
+                    <th class="text-center">NUMEROS GENERADOS</th>
+                    <th class="text-center">VECES ENCONTRADAS</th>
+                </tr>
+                {{#each numeros}}
+                <tr>
+                    <td class="text-center">{{numGenerados}}</td>
+                    <td class="text-center">{{numRepetidos}}</td>
+                </tr>
+                {{/each}}
+            </table>
+        </div>
+    </div>
+</div>
