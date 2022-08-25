@@ -9,7 +9,6 @@ const mensajeria = new normalizr.schema.Entity('messages', {authores: author},{i
 const schemaChat = new normalizr.schema.Entity('mensajes', {mensajes: [mensajeria]},{idAttribute: 'id'})
 
 function addMessage(e) {
-    //preventDefault(e)
     const fecha = new Date()
     const date = fecha.toLocaleDateString()
     const hour = fecha.toLocaleTimeString()

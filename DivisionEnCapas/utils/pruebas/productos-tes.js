@@ -1,5 +1,5 @@
-const Contenedor = require('../public/Contenedor.js')
-const {generadorProductos} = require('../utils/generadorProductos.js')
+const Contenedor = require('../../DAO/Contenedor.js')
+const {generadorProductos} = require('./generadorProductos.js')
 
 
 class ApiProductosTest extends Contenedor {

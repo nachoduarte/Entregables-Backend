@@ -1,10 +1,5 @@
-//const knex = require('knex')
-
-//const productos = []
-
 class Contenedor {
-    constructor (optionproducto){
-        //this.knex = knex(optionproducto);
+    constructor (){
         this.productos = [];
     }
 
@@ -24,6 +19,7 @@ class Contenedor {
         this.productos.push(newProd)
         return newProd
     }
+    
 }
 
 
