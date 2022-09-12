@@ -1,0 +1,28 @@
+#Productos
+components:
+  schemas:
+    Producto:
+      type: object
+      required: 
+        - id
+        - title
+        - price
+        - thumbnail
+      properties:
+        id: 
+          type: string
+          description: indentificador autogenerado de producto
+        title:
+          type: string
+          description: Nombre del producto
+        price:
+          type: number
+          description: valor del producto 
+        thumbnail:
+          type: string
+          description: URL de la foto del producto
+      example: 
+        id: 1
+        title: Martillo de mano
+        price: 1200
+        thumbnail: https://img.freepik.com/vector-gratis/diseno-etiqueta-martillo-garra-aislado_1308-61820.jpg?w=2000

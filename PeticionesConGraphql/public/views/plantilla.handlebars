@@ -1,0 +1,81 @@
+{{!-- Plantilla con la tabla para mostrar los productos --}}
+
+<div class="my-5">
+    <div class="h-100 w-100 mt-5 d-flex justify-content-around align-items-center border rounded border-secondary">
+        <h1 class="text-dark text-center my-4 ">Bienvenido <span class="mx-5 text-success" >{{username}}</span></h1>
+        <form class="" action="/api/logout" method="POST">
+            <div class="d-flex justify-content-around align-items-center">
+                <button class="btn btn-outline-dark h-50" >SALIR</button>
+            </div>    
+        </form>  
+    </div>
+
+    <h1 class="text-dark text-center my-4">INGRESE PRODUCTOS</h1>
+
+    {{!-- formulario de los productos --}}
+    <div class="h-100 w-100">
+        <form class="w-75 mx-auto" action="/api/productos" method="POST">
+            <div class="mb-3">
+                <label for="title" class="form-label">Nombre: </label>
+                <input type="text" class="form-control" name="title">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="price">Precio: </label>
+                <input class="form-control" type="text" name="price">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="thumbnail">Foto URL: </label>
+                <input class="form-control" type="text" name="thumbnail">
+            </div>
+            <div class="d-flex justify-content-around align-items-center">
+                <button class="btn btn-outline-dark h-50" >Agregar</button>
+            </div>    
+        </form>
+</div>
+
+
+
+<div class="h-100 w-100 mt-5">
+    {{#if productoTrue}}
+    <div class="table w-75 mx-auto">
+        <table class="table table-light table-striped">
+            <tr>
+                <th class="text-center">Nombre</th>
+                <th class="text-center">Precio</th>
+                <th class="text-center">Foto</th>
+            </tr>
+            {{#each producto}}
+            <tr>
+                <td class="text-center">{{this.title}}</td>
+                <td class="text-center">{{this.price}}</td>
+                <td class="text-center"><img width="50" src={{this.thumbnail}} alt="not found"></td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+    {{else}}
+    <h3 class="alert alert-danger">No hay productos</h3>
+    {{/if}}
+    </div>
+    
+
+<div class="h-100 w-100 mt-5">
+    <h1 class="text-dark text-center my-4">CENTRO DE MENSAJES</h1>
+
+    <div id="porcentajeNormalizado" class="text-dark text-center my-4 fs-4 text-primary"></div>
+
+    <form class="w-100 mx-auto" onsubmit="return addMessage(this)">
+        <input class="form-control my-2" type="email" id="email" placeholder="Su correo electronico" required>
+        <input class="form-control my-2" type="text" id="nombreUsuario" placeholder="Escriba su nombre">
+        <input class="form-control my-2" type="text" id="apellidoUsuario" placeholder="Escriba su apellido">
+        <input class="form-control my-2" type="text" id="edadUsuario" placeholder="Coloque su edad">
+        <input class="form-control my-2" type="text" id="aliasUsuario" placeholder="Escriba su alias">
+        <input class="form-control my-2" type="text" id="fotoUsuario" placeholder="Inserte el URL de su avatar">
+        <div id="messages" class="text-start"></div>
+        <input class="form-control my-2" type="text" id="text" placeholder="Escriba su mensaje" required>
+        <div class="d-flex justify-content-around align-items-center my-2">
+            <input class="btn btn-outline-dark h-50" type="submit" value="Enviar"></input>
+        </div>
+    </form>
+</div>
+</div>

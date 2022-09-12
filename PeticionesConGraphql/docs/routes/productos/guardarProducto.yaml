@@ -1,0 +1,19 @@
+paths:
+  /api/productos:
+    post:
+      summary: Guarda un nuevo producto y crea su id 
+      tags: 
+        - Productos
+      requestBody:
+        required: true
+        content: 
+          aplication/json:
+            schemas:
+              $ref: '#/components/requestBodies/NuevoProducto'
+      responses:
+        "201":
+          description: El producto fue guardado
+          content:
+            aplication/json:
+              schema:
+                $ref: '#/components/schemas/Producto'

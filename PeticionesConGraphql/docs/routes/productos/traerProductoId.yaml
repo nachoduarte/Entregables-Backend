@@ -1,0 +1,21 @@
+paths:
+  /api/productos/{id}:
+    get:
+      summary: Traer el producto con el ID dado
+      tags:
+        - Productos
+      parameters:
+      - name: id
+        in: path
+        description: Se toma el id de los parametros
+        required: true
+        type: string
+      responses:
+        "200":
+          description: Producto con el ID especificado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Producto'
+        "404":
+          description: Producto no encontrado

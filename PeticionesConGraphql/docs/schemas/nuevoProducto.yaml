@@ -1,0 +1,24 @@
+# Nuevo Producto
+components:
+  requestBodies:
+    NuevoProducto:
+      type: object
+      required:
+        - title
+        - price
+        - thumbnail
+      properties:
+        title:
+          type: string
+          description: Nombre del producto
+        price:
+          type: number
+          description: valor del producto 
+        thumbnail:
+          type: string
+          description: URL de la foto del producto
+      example: 
+        id: 1
+        title: Martillo 
+        price: 1300
+        thumbnail: https://img.freepik.com/vector-gratis/diseno-etiqueta-martillo-garra-aislado_1308-61820.jpg?w=2000
