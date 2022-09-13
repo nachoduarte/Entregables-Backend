@@ -8,7 +8,7 @@ paths:
         required: true
         content: 
           aplication/json:
-            schemas:
+            schema:
               $ref: '#/components/requestBodies/NuevoProducto'
       responses:
         "201":

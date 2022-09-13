@@ -1,0 +1,43 @@
+mutation {
+  actualizarProducto(id: 3, dat:{
+    title: "avion",
+    price: 123456,
+    thumbnail: "foto 3"
+  		}){
+    title
+    id
+  }
+}
+
+mutation {
+  guardarProducto(dat:{
+    title: "avion",
+    price: 123456,
+    thumbnail: "foto 3"
+  		}){
+    title
+    id
+  }
+}
+
+mutation {
+  deleteProducto(id: 3){
+    title
+    id
+  }
+}
+
+
+query {
+  getProductos{
+    title
+    id
+  }
+}
+
+query {
+  getProductoId (id: "2"){
+    title
+    id
+  }
+}

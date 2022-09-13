@@ -1,4 +1,4 @@
-const {Router} = require('express')
+const { Router } = require('express')
 const router = Router()
 const controller = require('../controller/index.js')
 const passport = require('passport')
@@ -22,11 +22,11 @@ router.get('/api/errorLogin', controller.errorLogin)
 
 //PRODUCTOS
 
-router.get('/api/productos', /* controller.autenticacion, */ controller.productosGet)
-router.get('/api/productos/:id', /* controller.autenticacion, */ controller.productosGetId)
-router.post('/api/productos', /* controller.autenticacion, */ controller.productosPost)
-router.put('/api/productos/:id',/*  controller.autenticacion, */ controller.productosPut)
-router.delete('/api/productos/:id',/*  controller.autenticacion, */ controller.productosDelete)
+router.get('/api/productos', controller.autenticacion, controller.productosGet)
+router.get('/api/productos/:id', controller.autenticacion, controller.productosGetId)
+router.post('/api/productos', controller.autenticacion, controller.productosPost)
+router.put('/api/productos/:id', controller.autenticacion, controller.productosPut)
+router.delete('/api/productos/:id', controller.autenticacion, controller.productosDelete)
 
 //INICIO 
 
